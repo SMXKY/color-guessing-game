@@ -12,5 +12,5 @@ export const loadingAnimation = () => {
     squares.forEach((square) => [
       (square.style.backgroundColor = generateRandomColor().color),
     ]);
-  }, 300);
+  }, 350);
 };
