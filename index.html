@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/game-page.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon (1).ico"
+      type="image/x-icon"
+    />
+    <title>RGB Rush</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="logo">
+        <p class="logo-text js-logo-title">RGB RUSH</p>
+        <img src="./assets/Group 2.png" alt="logo" class="logo-img" />
+      </div>
+
+      <p class="guess-rgb-text js-title">GUESS: RGB(255, 76, 91)</p>
+
+      <div class="color-grid js-sqare-grid">
+        <div class="color-square js-color-sqaures"></div>
+        <div class="color-square js-color-sqaures"></div>
+        <div class="color-square js-color-sqaures"></div>
+        <div class="color-square js-color-sqaures"></div>
+        <div class="color-square js-color-sqaures"></div>
+        <div class="color-square js-color-sqaures"></div>
+      </div>
+
+      <div class="final-score js-final-score hide-section">
+        <div class="final-scores-data">
+          <p>Wins: <span class="js-win-text-final">0</span></p>
+          <p>Loses: <span class="js-loss-text-final">0</span></p>
+        </div>
+
+        <button class="new-end-game-btn js-restart-btn">New Game</button>
+      </div>
+
+      <div class="action-btns js-action-btns">
+        <button class="end-btn js-end-btn">End Game</button>
+        <button class="js-run-game-btn">Start Game</button>
+        <button class="js-new-game-btn">New Game</button>
+      </div>
+
+      <div class="score js-scores">
+        <p>Wins: <span class="js-win-text">0</span></p>
+        <p>Loses: <span class="js-loss-text">0</span></p>
+      </div>
+    </div>
+
+    <div class="alert js-alert-holder"></div>
+
+    <audio
+      id="loadingSound"
+      src="./assets/loading.mp3"
+      preload="auto"
+      loop
+    ></audio>
+    <audio id="lossSound" src="./assets/loss.wav" preload="auto"></audio>
+    <audio id="winSound" src="./assets/win.wav" preload="auto"></audio>
+
+    <script src="./scripts/main.js" type="module"></script>
+  </body>
+</html>
