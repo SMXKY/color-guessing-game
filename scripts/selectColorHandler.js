@@ -7,8 +7,12 @@ export const selectColorHandler = (correctIndex, correctColor) => {
   const continueBtn = document.querySelector(".js-run-game-btn");
 
   squares.forEach((square, index) => {
-    // console.log(index, correctIndex);
-    square.addEventListener("click", () => {
+    const oldHandler = square._clickHandler;
+    if (oldHandler) {
+      square.removeEventListener("click", oldHandler);
+    }
+
+    const handleClick = () => {
       square.style.pointerEvents = "none";
       if (Number(index) === Number(correctIndex)) {
         score.wins++;
@@ -30,15 +34,14 @@ export const selectColorHandler = (correctIndex, correctColor) => {
       }
 
       square.style.opacity = 0;
-
       showAlert("Wrong Guess!", "Please try again🥲...", "loss");
 
       score.losses++;
-
       localStorage.setItem("score", JSON.stringify(score));
       updateScore();
+    };
 
-      return;
-    });
+    square._clickHandler = handleClick;
+    square.addEventListener("click", handleClick);
   });
 };
