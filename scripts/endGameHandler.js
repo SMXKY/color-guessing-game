@@ -15,6 +15,8 @@ export const endGameHandler = () => {
   textTitle.innerHTML = "Final Score";
   finalScorese.classList.remove("hide-section");
 
+  title.classList.add("small-screens");
+
   document.querySelector(".js-win-text-final").innerHTML = JSON.parse(
     localStorage.getItem("score")
   ).wins;
@@ -30,6 +32,7 @@ export const handleRestartGame = () => {
   scores.classList.remove("hide-section");
   textTitle.innerHTML = "GUESS: RGB(255, 76, 91)";
   finalScorese.classList.add("hide-section");
+  title.classList.remove("small-screens");
 
   newGameHandler();
 };

@@ -187,6 +187,13 @@
     width: 100%;
     justify-content: center;
   }
+
+  .logo-text {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    /* max-width: 16rem; */
+  }
 }
 
 @media (max-width: 538px) {
@@ -198,6 +205,10 @@
     /* background-color: red; */
     width: 100%;
     justify-content: center;
+  }
+
+  .small-screens {
+    font-size: 1.2rem;
   }
 }
 
